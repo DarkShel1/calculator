@@ -24,18 +24,6 @@ public class App
         romanianDecimals.put(9, "XC");
         romanianDecimals.put(10, "C");
 
-        final HashMap<String, Integer> romanian = new HashMap<>();
-        romanian.put("I", 1);
-        romanian.put("II", 2);
-        romanian.put("III", 3);
-        romanian.put("IV", 4);
-        romanian.put("V", 5);
-        romanian.put("VI", 6);
-        romanian.put("VII", 7);
-        romanian.put("VIII", 8);
-        romanian.put("IX", 9);
-        romanian.put("X", 10);
-
         final HashMap<Integer, String> romanianReverse = new HashMap<>();
         romanianReverse.put(1, "I");
         romanianReverse.put(2, "II");
@@ -47,6 +35,18 @@ public class App
         romanianReverse.put(8, "VIII");
         romanianReverse.put(9, "IX");
         romanianReverse.put(10, "X");
+
+        final HashMap<String, Integer> romanian = new HashMap<>();
+        romanian.put("I", 1);
+        romanian.put("II", 2);
+        romanian.put("III", 3);
+        romanian.put("IV", 4);
+        romanian.put("V", 5);
+        romanian.put("VI", 6);
+        romanian.put("VII", 7);
+        romanian.put("VIII", 8);
+        romanian.put("IX", 9);
+        romanian.put("X", 10);
 
         Integer res = null;
         String romanianRes = null;
@@ -61,9 +61,13 @@ public class App
         }
         if (res <= 0){
             return;
-        } else if(res/10 > 0){
+        } else if(res/10 > 1){
             romanianRes = romanianDecimals.get(res/10);
-            System.out.println(romanianRes + romanianDecimals.get(res%10));
+            if (res%10 > 0){
+                System.out.println(romanianRes + romanianReverse.get(res%10));
+            } else {
+                System.out.println(romanianRes);
+            }
         } else {
             System.out.println(romanianReverse.get(res));
         }
