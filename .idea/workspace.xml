@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61dbd4bd-dc72-4578-9bc7-2d9f86cd7634" name="Changes" comment="mvp">
+    <list default="true" id="61dbd4bd-dc72-4578-9bc7-2d9f86cd7634" name="Changes" comment="bug fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
     </list>
@@ -15,6 +15,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="eeb4d7d2-d291-41b8-96fc-1d7bd2e648c2" />
+        <option name="url" value="https://github.com/DarkShel1/calculator.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.1/lib/src.zip!/java.base/java/util/Scanner.java" root0="FORCE_HIGHLIGHTING" />
@@ -59,7 +72,7 @@
       <workItem from="1678657088283" duration="5110000" />
       <workItem from="1678902415691" duration="2727000" />
       <workItem from="1679063284360" duration="759000" />
-      <workItem from="1679073557603" duration="14094000" />
+      <workItem from="1679073557603" duration="15249000" />
     </task>
     <task id="LOCAL-00001" summary="base">
       <created>1679088432000</created>
@@ -75,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679090249954</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bug fixes">
+      <created>1679239819983</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679239819983</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,6 +104,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="base" />
     <MESSAGE value="mvp" />
-    <option name="LAST_COMMIT_MESSAGE" value="mvp" />
+    <MESSAGE value="bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixes" />
   </component>
 </project>

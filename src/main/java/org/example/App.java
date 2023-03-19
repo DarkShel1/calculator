@@ -83,6 +83,7 @@ public class App
                 Integer a = Integer.valueOf(in.next());
                 String b = in.next();
                 Integer c = Integer.valueOf(in.next());
+
                 switch (b) {
                     case "+" -> System.out.println(a + c);
                     case "-" -> System.out.println(a - c);
