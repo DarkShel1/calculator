@@ -49,7 +49,7 @@ public class App
         romanian.put("IX", 9);
         romanian.put("X", 10);
 
-        Integer result = 0;
+        int result = 0;
         String romanianResult;
 
         switch (b) {
@@ -73,7 +73,7 @@ public class App
         }
     }
 
-
+    @SuppressWarnings("InfiniteLoopStatement")
     public static void main( String[] args ) throws IOException
     {
         final HashMap<String, Integer> romanians = new HashMap<>();
@@ -113,24 +113,6 @@ public class App
                     case "/" -> System.out.println(a / c);
                 }
             }
-
-//            if (romanians.containsValue(Integer.valueOf(arr[0]))) {
-//                Integer a = Integer.valueOf(arr[0]);
-//                String b = arr[1];
-//                Integer c = Integer.valueOf(arr[2]);
-//                switch (b) {
-//                    case "+" -> System.out.println(a + c);
-//                    case "-" -> System.out.println(a - c);
-//                    case "*" -> System.out.println(a * c);
-//                    case "/" -> System.out.println(a / c);
-//                }
-//            } else if (romanians.containsKey(arr[0]) && romanians.containsKey(arr[2])) {
-//                String a = arr[0];
-//                String b = arr[1];
-//                String c = arr[2];
-//                printRomanian(a, b, c);
-//            }
-
         }
     }
 }
