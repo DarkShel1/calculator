@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61dbd4bd-dc72-4578-9bc7-2d9f86cd7634" name="Changes" comment="bug fixes">
+    <list default="true" id="61dbd4bd-dc72-4578-9bc7-2d9f86cd7634" name="Changes" comment="all examples are passed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
     </list>
@@ -22,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
@@ -80,7 +85,7 @@
       <workItem from="1678657088283" duration="5110000" />
       <workItem from="1678902415691" duration="2727000" />
       <workItem from="1679063284360" duration="759000" />
-      <workItem from="1679073557603" duration="22094000" />
+      <workItem from="1679073557603" duration="27819000" />
     </task>
     <task id="LOCAL-00001" summary="base">
       <created>1679088432000</created>
@@ -110,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679240780886</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="all examples are passed">
+      <created>1679254423170</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679254423170</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +132,7 @@
     <MESSAGE value="base" />
     <MESSAGE value="mvp" />
     <MESSAGE value="bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixes" />
+    <MESSAGE value="all examples are passed" />
+    <option name="LAST_COMMIT_MESSAGE" value="all examples are passed" />
   </component>
 </project>

@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Hello world!
  *
  */
-public class App 
+public class App
 {
 
     static void printRomanian(String a, String b, String c) throws IOException{
@@ -49,17 +49,16 @@ public class App
         romanian.put("IX", 9);
         romanian.put("X", 10);
 
-        int result = 0;
+        Integer result = 0;
         String romanianResult;
 
-        if (romanian.containsKey(a) && romanian.containsKey(c)){
-            switch (b) {
-                case "+" -> result = romanian.get(a) + romanian.get(c);
-                case "-" -> result = romanian.get(a) - romanian.get(c);
-                case "*" -> result = romanian.get(a) * romanian.get(c);
-                case "/" -> result = romanian.get(a) / romanian.get(c);
+        switch (b) {
+            case "+" -> result = romanian.get(a) + romanian.get(c);
+            case "-" -> result = romanian.get(a) - romanian.get(c);
+            case "*" -> result = romanian.get(a) * romanian.get(c);
+            case "/" -> result = romanian.get(a) / romanian.get(c);
             }
-        }
+
         if (result <= 0){
             throw new IOException();
         } else if(result/10 > 1){
@@ -77,30 +76,61 @@ public class App
 
     public static void main( String[] args ) throws IOException
     {
+        final HashMap<String, Integer> romanians = new HashMap<>();
+        romanians.put("I", 1);
+        romanians.put("II", 2);
+        romanians.put("III", 3);
+        romanians.put("IV", 4);
+        romanians.put("V", 5);
+        romanians.put("VI", 6);
+        romanians.put("VII", 7);
+        romanians.put("VIII", 8);
+        romanians.put("IX", 9);
+        romanians.put("X", 10);
+
+
         while (true) {
             Scanner in = new Scanner(System.in);
-            if (in.hasNextInt()) {
-                Integer a = Integer.valueOf(in.next());
-                String b = in.next();
-                Integer c = Integer.valueOf(in.next());
-//                if (in.next() != null) {
-//                    throw new IOException();
-//                }
+            String line = in.nextLine();
+            String[] arr = line.split(" ");
+            if (arr.length != 3){
+                throw new IOException();
+            }
+
+            if (romanians.containsKey(arr[0]) && romanians.containsKey(arr[2])) {
+                String a = arr[0];
+                String b = arr[1];
+                String c = arr[2];
+                printRomanian(a, b, c);
+            } else if (romanians.containsValue(Integer.valueOf(arr[0]))) {
+                Integer a = Integer.valueOf(arr[0]);
+                String b = arr[1];
+                Integer c = Integer.valueOf(arr[2]);
                 switch (b) {
                     case "+" -> System.out.println(a + c);
                     case "-" -> System.out.println(a - c);
                     case "*" -> System.out.println(a * c);
                     case "/" -> System.out.println(a / c);
                 }
-            } else if (in.hasNextLine()){
-                String a = String.valueOf(in.next());
-                String b = in.next();
-                String c = String.valueOf(in.next());
-                printRomanian(a, b, c);
             }
-            if (in.next() != null) {
-                throw new IOException();
-            }
+
+//            if (romanians.containsValue(Integer.valueOf(arr[0]))) {
+//                Integer a = Integer.valueOf(arr[0]);
+//                String b = arr[1];
+//                Integer c = Integer.valueOf(arr[2]);
+//                switch (b) {
+//                    case "+" -> System.out.println(a + c);
+//                    case "-" -> System.out.println(a - c);
+//                    case "*" -> System.out.println(a * c);
+//                    case "/" -> System.out.println(a / c);
+//                }
+//            } else if (romanians.containsKey(arr[0]) && romanians.containsKey(arr[2])) {
+//                String a = arr[0];
+//                String b = arr[1];
+//                String c = arr[2];
+//                printRomanian(a, b, c);
+//            }
+
         }
     }
 }
