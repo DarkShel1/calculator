@@ -13,6 +13,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -72,7 +80,7 @@
       <workItem from="1678657088283" duration="5110000" />
       <workItem from="1678902415691" duration="2727000" />
       <workItem from="1679063284360" duration="759000" />
-      <workItem from="1679073557603" duration="15249000" />
+      <workItem from="1679073557603" duration="22094000" />
     </task>
     <task id="LOCAL-00001" summary="base">
       <created>1679088432000</created>
@@ -95,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679239819983</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="bug fixes">
+      <created>1679240780886</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679240780886</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

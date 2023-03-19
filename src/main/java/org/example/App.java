@@ -83,7 +83,9 @@ public class App
                 Integer a = Integer.valueOf(in.next());
                 String b = in.next();
                 Integer c = Integer.valueOf(in.next());
-
+//                if (in.next() != null) {
+//                    throw new IOException();
+//                }
                 switch (b) {
                     case "+" -> System.out.println(a + c);
                     case "-" -> System.out.println(a - c);
@@ -95,6 +97,9 @@ public class App
                 String b = in.next();
                 String c = String.valueOf(in.next());
                 printRomanian(a, b, c);
+            }
+            if (in.next() != null) {
+                throw new IOException();
             }
         }
     }
