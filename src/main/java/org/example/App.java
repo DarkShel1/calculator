@@ -1,5 +1,6 @@
 package org.example;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -10,7 +11,7 @@ import java.util.Scanner;
 public class App 
 {
 
-    static void print(String a, String b, String c){
+    static void printRomanian(String a, String b, String c) throws IOException{
 
         final HashMap<Integer, String> romanianDecimals = new HashMap<>();
         romanianDecimals.put(1, "X");
@@ -48,33 +49,33 @@ public class App
         romanian.put("IX", 9);
         romanian.put("X", 10);
 
-        Integer res = null;
-        String romanianRes = null;
+        int result = 0;
+        String romanianResult;
 
         if (romanian.containsKey(a) && romanian.containsKey(c)){
             switch (b) {
-                case "+" -> res = romanian.get(a) + romanian.get(c);
-                case "-" -> res = romanian.get(a) - romanian.get(c);
-                case "*" -> res = romanian.get(a) * romanian.get(c);
-                case "/" -> res = romanian.get(a) / romanian.get(c);
+                case "+" -> result = romanian.get(a) + romanian.get(c);
+                case "-" -> result = romanian.get(a) - romanian.get(c);
+                case "*" -> result = romanian.get(a) * romanian.get(c);
+                case "/" -> result = romanian.get(a) / romanian.get(c);
             }
         }
-        if (res <= 0){
-            return;
-        } else if(res/10 > 1){
-            romanianRes = romanianDecimals.get(res/10);
-            if (res%10 > 0){
-                System.out.println(romanianRes + romanianReverse.get(res%10));
+        if (result <= 0){
+            throw new IOException();
+        } else if(result/10 > 1){
+            romanianResult = romanianDecimals.get(result/10);
+            if (result%10 > 0){
+                System.out.println(romanianResult + romanianReverse.get(result%10));
             } else {
-                System.out.println(romanianRes);
+                System.out.println(romanianResult);
             }
         } else {
-            System.out.println(romanianReverse.get(res));
+            System.out.println(romanianReverse.get(result));
         }
     }
 
 
-    public static void main( String[] args )
+    public static void main( String[] args ) throws IOException
     {
         while (true) {
             Scanner in = new Scanner(System.in);
@@ -92,7 +93,7 @@ public class App
                 String a = String.valueOf(in.next());
                 String b = in.next();
                 String c = String.valueOf(in.next());
-                print(a, b, c);
+                printRomanian(a, b, c);
             }
         }
     }
