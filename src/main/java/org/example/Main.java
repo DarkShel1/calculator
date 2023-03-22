@@ -8,10 +8,10 @@ import java.util.Scanner;
  * Hello world!
  *
  */
-public class App
+public class Main
 {
 
-    static void printRomanian(String a, String b, String c) throws IOException{
+    static String printRomanian(String a, String b, String c) throws IOException{
 
         final HashMap<Integer, String> romanianDecimals = new HashMap<>();
         romanianDecimals.put(1, "X");
@@ -49,7 +49,7 @@ public class App
         romanian.put("IX", 9);
         romanian.put("X", 10);
 
-        int result = 0;
+        int result;
         String romanianResult;
 
         switch (b) {
@@ -57,6 +57,7 @@ public class App
             case "-" -> result = romanian.get(a) - romanian.get(c);
             case "*" -> result = romanian.get(a) * romanian.get(c);
             case "/" -> result = romanian.get(a) / romanian.get(c);
+			default -> throw new IOException();
             }
 
         if (result <= 0){
@@ -64,18 +65,16 @@ public class App
         } else if(result/10 > 1){
             romanianResult = romanianDecimals.get(result/10);
             if (result%10 > 0){
-                System.out.println(romanianResult + romanianReverse.get(result%10));
+                return romanianResult + romanianReverse.get(result % 10);
             } else {
-                System.out.println(romanianResult);
+                return String.valueOf(romanianResult);
             }
         } else {
-            System.out.println(romanianReverse.get(result));
+            return String.valueOf(romanianReverse.get(result));
         }
     }
+    public static String calc(String input) throws IOException{
 
-    @SuppressWarnings("InfiniteLoopStatement")
-    public static void main( String[] args ) throws IOException
-    {
         final HashMap<String, Integer> romanians = new HashMap<>();
         romanians.put("I", 1);
         romanians.put("II", 2);
@@ -88,31 +87,41 @@ public class App
         romanians.put("IX", 9);
         romanians.put("X", 10);
 
+        String output;
+        String[] arr = input.split(" ");
+        if (arr.length != 3){
+            throw new IOException();
+        }
 
+        if (romanians.containsKey(arr[0]) && romanians.containsKey(arr[2])) {
+            String a = arr[0];
+            String b = arr[1];
+            String c = arr[2];
+            output = printRomanian(a, b, c);
+        } else if (romanians.containsValue(Integer.valueOf(arr[0])) && romanians.containsValue(Integer.valueOf(arr[2]))) {
+            Integer a = Integer.valueOf(arr[0]);
+            String b = arr[1];
+            Integer c = Integer.valueOf(arr[2]);
+            switch (b) {
+                case "+" -> output = String.valueOf(a + c);
+                case "-" -> output = String.valueOf(a - c);
+                case "*" -> output = String.valueOf(a * c);
+                case "/" -> output = String.valueOf(a / c);
+                default -> throw new IOException();
+            }
+        } else {
+            throw new IOException();
+        }
+        return (output);
+    }
+
+    @SuppressWarnings("InfiniteLoopStatement")
+    public static void main( String[] args ) throws IOException
+    {
         while (true) {
             Scanner in = new Scanner(System.in);
             String line = in.nextLine();
-            String[] arr = line.split(" ");
-            if (arr.length != 3){
-                throw new IOException();
-            }
-
-            if (romanians.containsKey(arr[0]) && romanians.containsKey(arr[2])) {
-                String a = arr[0];
-                String b = arr[1];
-                String c = arr[2];
-                printRomanian(a, b, c);
-            } else if (romanians.containsValue(Integer.valueOf(arr[0]))) {
-                Integer a = Integer.valueOf(arr[0]);
-                String b = arr[1];
-                Integer c = Integer.valueOf(arr[2]);
-                switch (b) {
-                    case "+" -> System.out.println(a + c);
-                    case "-" -> System.out.println(a - c);
-                    case "*" -> System.out.println(a * c);
-                    case "/" -> System.out.println(a / c);
-                }
-            }
+            System.out.println(calc(line));
         }
     }
 }
